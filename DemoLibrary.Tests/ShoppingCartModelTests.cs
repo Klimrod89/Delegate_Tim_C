@@ -1,6 +1,6 @@
 namespace DemoLibrary.Tests;
 
-public class UnitTest1
+public class ShoppingCartModelTests
 {
     [Fact]
     public void Test1()
