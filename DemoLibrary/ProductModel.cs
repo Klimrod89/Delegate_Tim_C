@@ -2,6 +2,6 @@
 
 public class ProductModel
 {
-    public string ItemName { get; set; }
-    public decimal Price { get; set; }
+    public required string ItemName { get; set; }
+    public required decimal Price { get; set; }
 }
