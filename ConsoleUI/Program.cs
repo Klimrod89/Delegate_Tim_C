@@ -1,11 +1,15 @@
 ﻿
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
 using DemoLibrary;
 
 PopulateCartWithDemoData();
 
 Console.WriteLine($"The total for the cart is {cart.GenerateTotal(TellUser, CalculateSubTotal, DiscountInProcess):C2}");
-Console.WriteLine($"The total for the cart is {cart.GenerateTotal(x=>Console.WriteLine($"The subtotal is {x:C2}"), (x, y) => )}");
+Console.WriteLine($"The total for the cart is {cart.GenerateTotal(
+x=>Console.WriteLine($"The subtotal is {x:C2}"), 
+(x, y) => (x.Count > 2 && y > 10 ? (y * 0.9M) : y),
+Console.WriteLine):C2}");
 
 
 Console.WriteLine();
